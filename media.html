@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>גלריה – פרח הגן</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <main class="media-main">
+    <section class="gallery-section" data-aos="fade-up">
+      <h2 class="section-title">הגלריה שלנו</h2>
+      <div class="gallery-grid">
+        <!-- תמונות קטנות עם קישורים להגדלה -->
+        <img src="./images/pic1.jpg" alt="זר פרחים" data-full="./images/pic1.jpg" class="gallery-item" />
+        <img src="./images/pic2.jpg" alt="חנות פרחים" data-full="./images/pic2.jpg" class="gallery-item" />
+        <img src="./images/pic3.jpg" alt="אור בחנות פרחים" data-full="./images/pic3.jpg" class="gallery-item" />
+        <img src="./images/pic4.jpg" alt="מדף עם פרחים" data-full="./images/pic4.jpg" class="gallery-item" />
+      </div>
+    </section>
+    <section class="video-section" data-aos="fade-up">
+      <h2 class="section-title">וידאו</h2>
+      <div class="video-grid">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/RHyIvmCZ8B0" title="סידור פרחים ביתי" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/xjYjyBGTmi0" title="יסודות עיצוב פרחים" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <div id="lightbox-overlay" class="hidden">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-img" src="" alt="הגדלה">
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/load.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init({ duration: 800 });
+
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      const overlay = document.getElementById("lightbox-overlay");
+      const lightboxImg = document.querySelector(".lightbox-img");
+      const closeBtn = document.querySelector(".close-btn");
+
+      galleryItems.forEach(item => {
+        item.addEventListener("click", () => {
+          lightboxImg.src = item.dataset.full;
+          overlay.classList.remove("hidden");
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        overlay.classList.add("hidden");
+      });
+
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) overlay.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+
+</html>

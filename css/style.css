@@ -1,0 +1,153 @@
+body {
+  font-family: 'Heebo', sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* HEADER – אחיד לכל הדפים */
+.header {
+  background: linear-gradient(135deg, #2d5a27, #4a8f47);
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #a8d8a3;
+}
+
+
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #2d5a27;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-socials {
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #a8d8a3;
+  transform: scale(1.2);
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+/* בורגר */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background: #2d5a27;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #4a8f47;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+

@@ -1,0 +1,83 @@
+.contact-main {
+  max-width: 600px;
+  margin: 140px auto 80px;
+  padding: 0 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2d5a27;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.contact-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a8f47;
+}
+
+.error-message {
+  color: #c0392b;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #4a8f47, #2d5a27);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  justify-self: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #5da55a, #4a8f47);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contact-main {
+    margin: 120px 10px 40px;
+  }
+
+  .page-title {
+    font-size: 2.4rem;
+  }
+}

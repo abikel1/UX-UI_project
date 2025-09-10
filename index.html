@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרח הגן - חנות פרחים מקצועית</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- Slider -->
+    <div class="slider-container">
+        <div class="slide active"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80')">
+            <div class="slide-content">
+                <h1 class="slide-title">ברוכים הבאים לפרח הגן</h1>
+                <p class="slide-description">חנות הפרחים המובילה בישראל - מגוון עצום של פרחים טריים, זרי כלה מעוצבים
+                    ושירות מקצועי ברמה הגבוהה ביותר</p>
+            </div>
+        </div>
+
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="slide-content">
+                <h1 class="slide-title">זרי כלה מעוצבים</h1>
+                <p class="slide-description">כל כלה מגיעה אלינו עם חלום ייחודי. אנו יוצרים זרי כלה מותאמים אישית שיהפכו
+                    את היום המיוחד שלכם לבלתי נשכח</p>
+            </div>
+        </div>
+
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="slide-content">
+                <h1 class="slide-title">עיצוב אירועים מרהיב</h1>
+                <p class="slide-description">מחתונות ועד אירועי חברה - אנו מעצבים חוויות בלתי נשכחות עם פרחים טריים
+                    ועיצובים יוצאי דופן</p>
+            </div>
+        </div>
+
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="slide-content">
+                <h1 class="slide-title">פרחים טריים מהשדה</h1>
+                <p class="slide-description">אספקה יומית של הפרחים הטריים ביותר ישירות מהחממות המובחרות במרכז הארץ לבית
+                    שלכם</p>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="slider-arrow prev" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="slider-arrow next" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="slider-nav">
+            <div class="nav-dot active" onclick="currentSlide(1)"></div>
+            <div class="nav-dot" onclick="currentSlide(2)"></div>
+            <div class="nav-dot" onclick="currentSlide(3)"></div>
+            <div class="nav-dot" onclick="currentSlide(4)"></div>
+        </div>
+    </div>
+
+    <!-- Side Banners -->
+    <div class="side-banner left-banner" data-aos="fade-left">
+        <span>📞 משלוח עד הבית</span>
+    </div>
+    <div class="side-banner right-banner" data-aos="fade-right">
+        <span>🎁 הנחות מיוחדות</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Info Boxes Section -->
+        <section class="content-section">
+            <h2 class="section-title" data-aos="fade-up">השירותים שלנו</h2>
+
+            <div class="info-boxes">
+                <div class="info-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-box-icon">💐</div>
+                    <h3 class="info-box-title">זרי כלה</h3>
+                    <p class="info-box-description">עיצוב זרי כלה מותאמים אישית בסגנונות שונים - מקלאסי ועד מודרני. כל
+                        זר מעוצב בקפידה עם הפרחים הטריים ביותר</p>
+                </div>
+
+                <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-box-icon">🎪</div>
+                    <h3 class="info-box-title">עיצוב אירועים</h3>
+                    <p class="info-box-description">שירות עיצוב מלא לחתונות ואירועים - מהרעיון ועד הביצוע. צוות מקצועי
+                        שיהפוך את האירוע שלכם לבלתי נשכח</p>
+                </div>
+
+                <div class="info-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-box-icon">🌹</div>
+                    <h3 class="info-box-title">פרחים טריים</h3>
+                    <p class="info-box-description">מגוון עצום של פרחים טריים הזמינים מדי יום. מורד הולנדיים ועד פרחי בר
+                        ישראליים - הכל במקום אחד</p>
+                </div>
+
+                <div class="info-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="info-box-icon">🚚</div>
+                    <h3 class="info-box-title">משלוח עד הבית</h3>
+                    <p class="info-box-description">שירות משלוח מהיר ואמין לכל רחבי הארץ. הזמנה עד השעה 14:00 - משלוח
+                        באותו היום</p>
+                </div>
+
+                <div class="info-box" data-aos="fade-up" data-aos-delay="500">
+                    <div class="info-box-icon">🌿</div>
+                    <h3 class="info-box-title">עיצוב גינות</h3>
+                    <p class="info-box-description">שירות תכנון ועיצוב גינות פרטיות ועסקיות. מהתכנון ועד הנטיעה - נדאג
+                        לכל הפרטים</p>
+                </div>
+
+                <div class="info-box" data-aos="fade-up" data-aos-delay="600">
+                    <div class="info-box-icon">🎨</div>
+                    <h3 class="info-box-title">סדנאות עיצוב</h3>
+                    <p class="info-box-description">סדנאות מעשיות לעיצוב זרים וסידורי פרחים. מתאים למתחילים ומתקדמים
+                        כאחד</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" data-aos="fade-up">
+            <h2 class="section-title">למה לבחור בנו?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">ניסיון של 20 שנה</h3>
+                    <p class="feature-description">שני עשורים של מקצועיות ויצירתיות בתחום עיצוב הפרחים</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🌱</div>
+                    <h3 class="feature-title">פרחים טריים יומית</h3>
+                    <p class="feature-description">אספקה יומית מהחממות המובחרות בארץ</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">💎</div>
+                    <h3 class="feature-title">איכות ללא פשרות</h3>
+                    <p class="feature-description">רק הפרחים היפים והטריים ביותר עוברים את הבדיקה שלנו</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">התאמה אישית</h3>
+                    <p class="feature-description">כל עיצוב מותאם אישית לטעם ולתקציב של הלקוח</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/load.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        // Slider functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.nav-dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function changeSlide(direction) {
+            slideIndex += direction;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlide(slideIndex);
+        }
+
+        // Auto slide
+        setInterval(nextSlide, 5000);
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function showModal(message) {
+            const modal = document.getElementById("custom-modal");
+            const msg = document.getElementById("modal-message");
+            msg.textContent = message;
+            modal.classList.remove("hidden");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const closeBtn = document.querySelector('.close-btn');
+            closeBtn.addEventListener('click', () => {
+                document.getElementById("custom-modal").classList.add("hidden");
+            });
+        });
+
+        // Side banner clicks
+        document.querySelector('.left-banner').addEventListener('click', function () {
+            showModal('התקשרו אלינו: 03-1234567 לקבלת משלוח מהיר עד הבית!');
+        });
+
+        document.querySelector('.right-banner').addEventListener('click', function () {
+            showModal('הנחה של 15% על הזמנה ראשונה! השתמשו בקוד: FIRST15');
+        });
+
+        // Add parallax effect to slides
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+
+            slides.forEach(slide => {
+                slide.style.transform = `translateY(${rate}px)`;
+            });
+        });
+    </script>
+    <div id="custom-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modal-message">כאן תופיע ההודעה שלך</p>
+        </div>
+    </div>
+</body>
+
+</html>

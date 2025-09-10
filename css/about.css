@@ -1,0 +1,114 @@
+.about-hero {
+  position: relative;
+  height: 100vh;
+
+  /* 👇 כאן תכניסי את כתובת תמונת הרקע (רצוי JPG) */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/flower-bg.png'); 
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Heebo', sans-serif;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  color: white;
+  margin-top: 120px; /* הגדלתי מ-80px ל-120px */
+  padding-top: 60px; /* הוספתי padding עליון */
+}
+
+.about-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#about-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+}
+
+.hidden {
+  display: none;
+}
+
+.read-more-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: white;
+  color: #000;
+}
+
+.profile-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px auto; /* הוספתי margin-bottom של 30px */
+  border: 5px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* הוספתי */
+  top: -30px; /* הזזתי אותו קצת למעלה */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* תיקון למובייל */
+@media (max-width: 768px) {
+  .about-content {
+    margin-top: 150px; /* הגדלתי גם למובייל */
+    padding: 50px 20px 40px 20px; /* הגדלתי את ה-padding העליון */
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  #about-text {
+    font-size: 1rem;
+  }
+
+  .profile-wrapper {
+    width: 150px; /* הקטנתי למובייל */
+    height: 150px;
+    top: -40px; /* הגדלתי את ההזזה למעלה גם במובייל */
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>שאלות נפוצות – פרח הגן</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/faq.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="faq-main">
+    <h2 class="faq-title" data-aos="fade-down">שאלות נפוצות</h2>
+    <div class="accordion" data-aos="fade-up">
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          איך מזמינים זר אונליין?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="accordion-body">
+          פשוט נכנסים לעמוד הזמנות, בוחרים זר, ממלאים פרטים ומשלמים דרך האתר.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          האם אפשר להזמין למשלוח לאותו היום?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="accordion-body">
+          כן, אם הזמנתם עד השעה 14:00, נוכל לספק את ההזמנה באותו יום.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          אפשר להוסיף ברכה אישית לזר?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="accordion-body">
+          כמובן! יש שדה ייעודי בעת ההזמנה להוספת ברכה.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          מהם אזורי החלוקה שלכם?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="accordion-body">
+          אנו מספקים לכל אזור המרכז, השרון ויישובים סמוכים. במידת הצורך – צרו קשר!
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/load.js"></script>
+  <script>
+    AOS.init();
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

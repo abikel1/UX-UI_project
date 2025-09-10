@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>אודות - פרח הגן</title>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+
+  <!-- Fonts + Icons -->
+   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main class="about-hero">
+    <div class="about-overlay"></div>
+    <div class="about-content" data-aos="fade-up">
+      <div class="profile-wrapper">
+          <img src="./images/founder.png" alt="תמונה של אילה ביקל" class="profile-img" />
+      </div>
+      <h1>אודות</h1>
+      <p id="about-text">
+        אילה ביקל, המייסדת של "פרח הגן", חיה ונושמת פרחים. עם ניסיון של למעלה מ-15 שנה בתחום העיצוב, היא בונה כל סידור באהבה ובמקצועיות בלתי מתפשרת.
+        <span id="more" class="hidden">
+          אילה התחילה את דרכה כגננת, שם גילתה את הכוח של פרח קטן לגעת בלב. לאחר הכשרות באיטליה ובהולנד, פתחה את "פרח הגן" מתוך חזון של חוויה אישית לכל לקוח. כל זר כאן הוא סיפור של תשוקה, השראה ופריחה.
+        </span>
+      </p>
+      <button class="read-more-btn" onclick="toggleMore()">
+        קרא עוד <i class="fas fa-chevron-down"></i>
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/load.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleMore() {
+      const more = document.getElementById("more");
+      const btn = document.querySelector(".read-more-btn");
+      more.classList.toggle("hidden");
+      btn.innerHTML = more.classList.contains("hidden")
+        ? 'קרא עוד <i class="fas fa-chevron-down"></i>'
+        : 'הסתר <i class="fas fa-chevron-up"></i>';
+    }
+  </script>
+</body>
+</html>
