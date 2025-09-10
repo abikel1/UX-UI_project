@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => {
       document.getElementById("header").innerHTML = data;
 
-      // קוד הבורגר יפעל רק אחרי שההדר נטען
+      // ✅ קוד ניווט (בורגר)
       const burger = document.getElementById("burger");
       const sideMenu = document.getElementById("sideMenu");
       const overlay = document.getElementById("overlay");
@@ -41,6 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
           burger.classList.remove("active");
           sideMenu.classList.remove("active");
           overlay.classList.remove("active");
+        }
+      });
+
+      // ✅ כאן מוסיפים את הדגשת העמוד הפעיל
+      const currentPage = window.location.pathname.split("/").pop(); // לדוגמה: "about.html"
+
+      document.querySelectorAll('.nav-menu a, .side-menu a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (href === "index.html" && currentPage === "")) {
+          link.classList.add("active");
         }
       });
     });

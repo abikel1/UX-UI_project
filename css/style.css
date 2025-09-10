@@ -219,3 +219,9 @@ html, body {
         font-size: 1.5rem;
     }
 }
+
+.nav-menu a.active,
+.side-menu a.active {
+    border-bottom: 3px solid #a8d8a3;
+    color: #a8d8a3;
+}
