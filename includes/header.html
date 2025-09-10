@@ -17,6 +17,8 @@
         </div>
     </div>
 
+    <div class="overlay" id="overlay"></div>
+    
     <nav class="side-menu" id="sideMenu">
         <ul>
             <li><a href="index.html">בית</a></li>
@@ -27,13 +29,61 @@
         </ul>
     </nav>
 </header>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const burger = document.getElementById("burger");
-            const sideMenu = document.getElementById("sideMenu");
 
-            burger.addEventListener("click", () => {
-                sideMenu.classList.toggle("active");
+<script>
+    // המתן עד שהדף יטען לחלוטין
+    document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.getElementById("burger");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("overlay");
+
+        // בדיקה שכל האלמנטים קיימים
+        if (!burger || !sideMenu || !overlay) {
+            console.error("לא נמצאו אחד מהאלמנטים:", {burger, sideMenu, overlay});
+            return;
+        }
+
+        console.log("האלמנטים נמצאו בהצלחה!");
+
+        burger.addEventListener("click", function(e) {
+            e.preventDefault();
+            console.log("נלחץ על הבורגר!");
+            
+            burger.classList.toggle("active");
+            sideMenu.classList.toggle("active");
+            overlay.classList.toggle("active");
+            
+            console.log("Classes נוספו:", {
+                burgerActive: burger.classList.contains("active"),
+                menuActive: sideMenu.classList.contains("active"),
+                overlayActive: overlay.classList.contains("active")
             });
         });
-    </script>
+
+        // סגירת התפריט בלחיצה על ה-overlay
+        overlay.addEventListener("click", function() {
+            burger.classList.remove("active");
+            sideMenu.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+
+        // סגירת התפריט בלחיצה על קישור
+        const menuLinks = sideMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                burger.classList.remove("active");
+                sideMenu.classList.remove("active");
+                overlay.classList.remove("active");
+            });
+        });
+
+        // סגירת התפריט במקש ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                burger.classList.remove("active");
+                sideMenu.classList.remove("active");
+                overlay.classList.remove("active");
+            }
+        });
+    });
+</script>

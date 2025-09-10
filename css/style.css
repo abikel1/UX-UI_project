@@ -1,153 +1,221 @@
 body {
-  font-family: 'Heebo', sans-serif;
-  direction: rtl;
-  overflow-x: hidden;
+    font-family: 'Heebo', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
 }
 
 /* HEADER – אחיד לכל הדפים */
 .header {
-  background: linear-gradient(135deg, #2d5a27, #4a8f47);
-  padding: 1.5rem 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #2d5a27, #4a8f47);
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
 }
 
 .nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu a {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: #a8d8a3;
+    color: #a8d8a3;
 }
-
-
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: #2d5a27;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-top: 4rem;
+    background: #2d5a27;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 4rem;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-top p {
-  margin: 0;
-  font-size: 1rem;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .footer-socials {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .footer-socials a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  display: inline-block;
-  transition: color 0.3s ease, transform 0.3s ease;
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #a8d8a3;
-  transform: scale(1.2);
+    color: #a8d8a3;
+    transform: scale(1.2);
 }
 
 html, body {
-  overflow-x: hidden;
-  width: 100%;
+    overflow-x: hidden;
+    width: 100%;
 }
+
 /* בורגר */
 .burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    transition: transform 0.3s ease;
 }
 
 .burger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* אנימציית בורגר לצורת X */
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
 /* side menu */
 .side-menu {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  height: 100%;
-  width: 250px;
-  background: #2d5a27;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    right: -280px; /* שינוי מ-100% לפיקסלים מדויקים */
+    height: 100vh;
+    width: 280px;
+    background: linear-gradient(180deg, #2d5a27, #1a3d1a);
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .side-menu ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .side-menu li {
-  padding: 15px 20px;
-  border-bottom: 1px solid #4a8f47;
+    padding: 0;
+    border-bottom: 1px solid rgba(74, 143, 71, 0.3);
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 .side-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    padding: 20px 25px;
+    transition: all 0.3s ease;
+}
+
+.side-menu a:hover {
+    background: rgba(255,255,255,0.1);
+    color: #a8d8a3;
+    padding-right: 35px;
 }
 
 .side-menu.active {
-  left: 0;
+    right: 0;
+}
+
+/* אנימציה לפריטי התפריט */
+.side-menu.active li {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.side-menu.active li:nth-child(1) { transition-delay: 0.1s; }
+.side-menu.active li:nth-child(2) { transition-delay: 0.2s; }
+.side-menu.active li:nth-child(3) { transition-delay: 0.3s; }
+.side-menu.active li:nth-child(4) { transition-delay: 0.4s; }
+.side-menu.active li:nth-child(5) { transition-delay: 0.5s; }
+
+/* overlay כהה כשהתפריט פתוח */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* רספונסיביות */
 @media (max-width: 768px) {
-  .desktop-menu {
-    display: none;
-  }
+    .desktop-menu {
+        display: none;
+    }
 
-  .burger {
-    display: flex;
-  }
+    .burger {
+        display: flex;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
 }
-
-
