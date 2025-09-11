@@ -209,7 +209,9 @@
         }
 
         // Auto slide
-        setInterval(nextSlide, 5000);
+        if (window.innerWidth > 768) {
+            setInterval(nextSlide, 5000);
+        }
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

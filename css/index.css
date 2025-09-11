@@ -360,3 +360,17 @@
             color: #888;
             cursor: pointer;
         }
+
+        @media (max-width: 768px) {
+
+            .slider-arrow,
+            .slider-nav,
+            .slide:not(:first-child) {
+                display: none !important;
+            }
+
+            .slide {
+                position: relative;
+                opacity: 1 !important;
+            }
+        }
