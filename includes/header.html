@@ -33,13 +33,10 @@
 </header>
 
 <script>
-    // המתן עד שהדף יטען לחלוטין
     document.addEventListener('DOMContentLoaded', function () {
         const burger = document.getElementById("burger");
         const sideMenu = document.getElementById("sideMenu");
         const overlay = document.getElementById("overlay");
-
-        // בדיקה שכל האלמנטים קיימים
         if (!burger || !sideMenu || !overlay) {
             console.error("לא נמצאו אחד מהאלמנטים:", { burger, sideMenu, overlay });
             return;
@@ -62,14 +59,11 @@
             });
         });
 
-        // סגירת התפריט בלחיצה על ה-overlay
         overlay.addEventListener("click", function () {
             burger.classList.remove("active");
             sideMenu.classList.remove("active");
             overlay.classList.remove("active");
         });
-
-        // סגירת התפריט בלחיצה על קישור
         const menuLinks = sideMenu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', function () {
@@ -78,8 +72,6 @@
                 overlay.classList.remove("active");
             });
         });
-
-        // סגירת התפריט במקש ESC
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 burger.classList.remove("active");

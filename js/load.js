@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => {
       document.getElementById("header").innerHTML = data;
 
-      // ✅ קוד ניווט (בורגר)
       const burger = document.getElementById("burger");
       const sideMenu = document.getElementById("sideMenu");
       const overlay = document.getElementById("overlay");
@@ -44,8 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // ✅ כאן מוסיפים את הדגשת העמוד הפעיל
-      const currentPage = window.location.pathname.split("/").pop(); // לדוגמה: "about.html"
+      const currentPage = window.location.pathname.split("/").pop(); 
 
       document.querySelectorAll('.nav-menu a, .side-menu a').forEach(link => {
         const href = link.getAttribute('href');
