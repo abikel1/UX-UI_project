@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>טריוויה – פרח הגן</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/trivia.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="trivia-main">
+    <h2 class="trivia-title">טריוויה על פרחים</h2>
+    <form id="quizForm">
+      <div class="question-block">
+        <p>1. מהו צבע הפרח הכי נפוץ בזרי כלה?</p>
+        <label><input type="radio" name="q1" value="0" /> אדום</label><br/>
+        <label><input type="radio" name="q1" value="20" /> לבן</label><br/>
+        <label><input type="radio" name="q1" value="0" /> צהוב</label>
+        <p class="feedback" id="fb1"></p>
+      </div>
+
+      <div class="question-block">
+        <p>2. איזו חיה קשורה לסמל הפרחים “פרח הלוטוס”?</p>
+        <label><input type="radio" name="q2" value="0" /> ציפור</label><br/>
+        <label><input type="radio" name="q2" value="20" /> פיל</label><br/>
+        <label><input type="radio" name="q2" value="0" /> דג</label>
+        <p class="feedback" id="fb2"></p>
+      </div>
+
+      <div class="question-block">
+        <p>3. באיזו יבשת גדלים רוב הפרחים המשמשים לחפצי עיצוב?</p>
+        <label><input type="radio" name="q3" value="20" /> אסיה</label><br/>
+        <label><input type="radio" name="q3" value="0" /> אנטארקטיקה</label><br/>
+        <label><input type="radio" name="q3" value="0" /> אמריקה הדרומית</label>
+        <p class="feedback" id="fb3"></p>
+      </div>
+
+      <div class="question-block">
+        <p>4. איזה פרח מסמל את האהבה והיופי?</p>
+        <label><input type="radio" name="q4" value="20" /> ורד</label><br/>
+        <label><input type="radio" name="q4" value="0" /> סיגלית</label><br/>
+        <label><input type="radio" name="q4" value="0" /> חמורון</label>
+        <p class="feedback" id="fb4"></p>
+      </div>
+
+      <div class="question-block">
+        <p>5. מה השם המדעי של פרח הלווינדה?</p>
+        <label><input type="radio" name="q5" value="20" /> Lavandula</label><br/>
+        <label><input type="radio" name="q5" value="0" /> Rosea</label><br/>
+        <label><input type="radio" name="q5" value="0" /> Flora</label>
+        <p class="feedback" id="fb5"></p>
+      </div>
+
+      <button type="button" id="submitQuiz">שלח ושמ/י את הציון</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/load.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const submitBtn = document.getElementById('submitQuiz');
+      const resultBox = document.getElementById('result');
+
+      submitBtn.addEventListener('click', () => {
+        let score = 0;
+
+        // בדיקת כל שאלה
+        for (let i = 1; i <= 5; i++) {
+          const qName = 'q' + i;
+          const feedbackEl = document.getElementById('fb' + i);
+          const selected = document.querySelector(`input[name="${qName}"]:checked`);
+          if (selected) {
+            const val = Number(selected.value);
+            if (val === 20) {
+              feedbackEl.textContent = "✅ תשובה נכונה!";
+            } else {
+              feedbackEl.textContent = "❌ לא נכון.";
+            }
+            score += val;
+          } else {
+            feedbackEl.textContent = "⚠️ אנא בחרי תשובה.";
+          }
+        }
+
+        resultBox.textContent = `הציון שלך: ${score} מתוך 100`;
+      });
+    });
+  </script>
+</body>
+</html>

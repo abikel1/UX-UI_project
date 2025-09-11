@@ -1,0 +1,61 @@
+.trivia-main {
+  max-width: 800px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+  text-align: right;
+}
+
+.trivia-title {
+  font-size: 2.5rem;
+  color: #2d5a27;
+  margin-bottom: 30px;
+}
+
+.question-block {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.question-block p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question-block label {
+  font-size: 1.1rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+#submitQuiz {
+  background: linear-gradient(135deg, #4a8f47, #2d5a27);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#submitQuiz:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5da55a, #4a8f47);
+}
+
+.result-box {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2d5a27;
+}

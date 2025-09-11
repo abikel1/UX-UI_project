@@ -4,7 +4,7 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER – אחיד לכל הדפים */
+/* HEADER */
 .header {
     background: linear-gradient(135deg, #2d5a27, #4a8f47);
     padding: 1.5rem 0;
@@ -109,7 +109,6 @@ html, body {
     transition: all 0.3s ease;
 }
 
-/* אנימציית בורגר לצורת X */
 .burger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
 }
@@ -126,7 +125,7 @@ html, body {
 .side-menu {
     position: fixed;
     top: 0;
-    right: -280px; /* שינוי מ-100% לפיקסלים מדויקים */
+    right: -280px;
     height: 100vh;
     width: 280px;
     background: linear-gradient(180deg, #2d5a27, #1a3d1a);
@@ -170,7 +169,6 @@ html, body {
     right: 0;
 }
 
-/* אנימציה לפריטי התפריט */
 .side-menu.active li {
     transform: translateX(0);
     opacity: 1;
@@ -182,7 +180,6 @@ html, body {
 .side-menu.active li:nth-child(4) { transition-delay: 0.4s; }
 .side-menu.active li:nth-child(5) { transition-delay: 0.5s; }
 
-/* overlay כהה כשהתפריט פתוח */
 .overlay {
     position: fixed;
     top: 0;
